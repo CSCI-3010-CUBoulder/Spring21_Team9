@@ -46,7 +46,12 @@ std::vector<int> VectorTimesN(std::vector<int> v, int n);
 std::vector<int> Multiples(int n, int m);
 
 // takes an integer n that is >= 0 and returns a vector of all squares up to n^n (1^1, 2^2, 3^3, .... n^n)
-std::vector<int> SquaresUntil(int n);
+std::vector<int> SquaresUntil(int n) {
+    std::vector<int> vec;
+    for (int i = 0; i < n; i++){
+        vec.push_back(i * i);
+    }
+}
 
 // takes an int, n, and returns the nth value of the fibonacci sequence (1, 1, 2, 3, 5, 8, 13, ...)
 int NthFibonacci(int n);
@@ -55,7 +60,14 @@ int NthFibonacci(int n);
 int Factorial(int n);
 
 // returns -1 if the number is negative and 1 if positive
-int Sign(int num);
+int Sign(int num) {
+    if ( num < 0 ) {
+        return -1;
+    }
+    if ( num >= 0) {
+        return 0;
+    }
+}
 
 // takes two vectors of doubles, a and b. The function then removes elements from a if they are also in b.
 // If the double is in b, but not in a, nothing happens.
