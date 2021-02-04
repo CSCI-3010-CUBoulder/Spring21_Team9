@@ -39,11 +39,21 @@ int Product(std::vector<int> nums);
 std::vector<int> VectorPlusN(std::vector<int> v, int n);
 
 // Multiples an integer n with each element of a given vector
-std::vector<int> VectorTimesN(std::vector<int> v, int n);
+std::vector<int> VectorTimesN(std::vector<int> v, int n){
+	for(int i = 0; i < v.size; i++){
+		v[i] = v[i] * n;
+	}
+}
 
 // takes in two integers and returns a vector of size n with
 // values n*1, n*2, n*3... up to n*m
-std::vector<int> Multiples(int n, int m);
+std::vector<int> Multiples(int n, int m){
+	std::vector<int> mult;
+	for(int i = 0; i <= m; i++){
+		mult[i] = n * i;
+	}
+return mult;
+}
 
 // takes an integer n that is >= 0 and returns a vector of all squares up to n^n (1^1, 2^2, 3^3, .... n^n)
 std::vector<int> SquaresUntil(int n);
