@@ -8,3 +8,8 @@ TEST_CASE( "Factorials are computed", "[factorial]" ) {
     REQUIRE( Factorial(3) == 6 );
     REQUIRE( Factorial(10) == 3628800 );
 }
+
+TEST_CASE( "Signs are computed", "[sign]" ) {
+    REQUIRE( Sign(5) == 1 );
+    REQUIRE( Sign(-5) == -1 );
+}
